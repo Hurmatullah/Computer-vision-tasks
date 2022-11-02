@@ -5,7 +5,7 @@ import numpy as np
 
 
 def show(final):
-    cv.imshow('Теплый', final)
+    cv.imshow('Холодный', final)
     cv.waitKey(0)
     cv.destroyAllWindows()
 
@@ -21,8 +21,8 @@ def white_balance_loops(img):
             l, a, b = result[x, y, :]
             # fix for CV correction
             l *= 100 / 255.0
-            result[x, y, 1] = a - ((avg_a - 128) * (l / 100.0) * 1.1)
-            result[x, y, 2] = b - ((avg_b - 195) * (l / 100.0) * 1.1)
+            result[x, y, 1] = a - ((avg_a - 122) * (l / 100.0) * 1.1)
+            result[x, y, 2] = b - ((avg_b - 108) * (l / 100.0) * 1.1)
     result = cv.cvtColor(result, cv.COLOR_LAB2BGR)
     return result
 
