@@ -1,3 +1,4 @@
+#сделать размытие изображения
 import cv2 as cv
 
 img = cv.imread('images.jpg')
