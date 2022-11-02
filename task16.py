@@ -1,4 +1,4 @@
-#изменить баланс белого, сделать более "теплую" картинку
+# изменить баланс белого, сделать более "холодную" картинку
 from __future__ import (division, absolute_import, print_function, unicode_literals)
 import cv2 as cv
 import numpy as np
