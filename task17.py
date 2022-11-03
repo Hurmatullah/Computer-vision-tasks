@@ -15,6 +15,7 @@ switch = '0 : OFF \n1 : ON'
 cv.createTrackbar(switch, 'Color_Palette',0,1,callbackFunction)
 while(1):
     cv.imshow('Color_Palette',img)
+    cv.imwrite('task17-image/color_palette.jpg', img)
     k = cv.waitKey(1) & 0xFF
     if k == 27:
         break
