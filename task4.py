@@ -7,5 +7,6 @@ image = cv.imread('images.jpg')
 gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 #Показ нашего изображения на экране
 cv.imshow('Gray Image', gray)
+cv.imwrite('task4-image/gray_image.jpg', gray)
 cv.waitKey(0)
 cv.destroyAllWindows()
