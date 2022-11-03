@@ -28,4 +28,4 @@ def white_balance_loops(img):
 
 final = np.hstack((img, white_balance_loops(img)))
 show(final)
-cv.imwrite('task15-image/result.jpg', final)
+cv.imwrite('task16-image/cold_photo.jpg', final)
