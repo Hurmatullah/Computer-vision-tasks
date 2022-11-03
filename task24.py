@@ -47,7 +47,6 @@ def erosion(val):
     cv.imshow(title_erosion_window, erosion_dst)
 
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Code for Eroding and Dilating tutorial.')
     parser.add_argument('--input', help='Path to input image.', default='images.jpg')

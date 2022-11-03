@@ -4,13 +4,13 @@ from matplotlib import pyplot as plt
 
 img0 = cv2.imread('images.jpg')
 
-# converting to gray scale
+# преобразование в оттенки серого
 gray = cv2.cvtColor(img0, cv2.COLOR_BGR2GRAY)
 
-# remove noise
+# удаление шума
 img = cv2.GaussianBlur(gray,(3,3),0)
 
-# convolute with proper kernels
+# свернутый с правильными ядрами
 laplacian = cv2.Laplacian(img,cv2.CV_64F)
 sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)  # x
 sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)  # y

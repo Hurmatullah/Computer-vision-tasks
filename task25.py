@@ -42,7 +42,6 @@ def dilatation(val):
     dilatation_dst = cv.dilate(src, element)
     cv.imshow(title_dilation_window, dilatation_dst)
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Code Dilating tutorial.')
     parser.add_argument('--input', help='Path to input image.', default='images.jpg')

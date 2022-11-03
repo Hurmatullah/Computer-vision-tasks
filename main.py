@@ -13,3 +13,4 @@ kp, des = orb.compute(image, kp)
 # Рисование ключевых моментов
 img2 = cv.drawKeypoints(image, kp, None, color=(0,255,0), flags=0)
 plt.imshow(img2), plt.show()
+cv.imwrite('task1-image/image1.jpg', img2)
