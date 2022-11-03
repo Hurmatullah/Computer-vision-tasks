@@ -1,8 +1,7 @@
 #отразить изображение по нижней границе
 import cv2 as cv
-import numpy as np
-import matplotlib.pyplot as plt
 
+#Поиск изображения по источнику
 image = cv.imread('images.jpg')
-img_flip_ud = cv.flip(image, 0)
-cv.imwrite('task7-image/new_flip_image.jpg', img_flip_ud)
+flipImageBottom = cv.flip(image, 0)
+cv.imwrite('task7-image/new_flip_image.jpg', flipImageBottom)
