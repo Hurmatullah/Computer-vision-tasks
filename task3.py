@@ -1,13 +1,12 @@
 #найти canny edges на изображенни
 import cv2 as cv
-import numpy as np
 import matplotlib.pyplot as plt
 
+# Поиск изображения по источнику
 image = cv.imread('images.jpg',0)
+#Используя метод хитрого изображения для нашего изображения
 edges = cv.Canny(image,100,200)
-plt.subplot(121),plt.imshow(image,cmap = 'gray')
-plt.title('Original Image'), plt.xticks([]), plt.yticks([])
-plt.subplot(122),plt.imshow(edges,cmap = 'gray')
-plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
-
-plt.show()
+#Сравнение исходного изображения с измененным состоянием нашего изображения с помощью canny image.
+cv.imshow('Original image', image)
+cv.imshow('Canny edges', edges)
+cv.waitKey(0)
