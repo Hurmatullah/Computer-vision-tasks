@@ -8,8 +8,7 @@ th1 = cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_MEAN_C,\
             cv.THRESH_BINARY,11,2)
 th2 = cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv.THRESH_BINARY,11,2)
-titles = ['Original Image',
-            'Adaptive Mean Thresholding', 'Adaptive Gaussian Thresholding']
+titles = ['Original Image', 'Adaptive Mean Thresholding', 'Adaptive Gaussian Thresholding']
 images = [img,th1, th2]
 for i in range(3):
     plt.subplot(2,2,i+1),plt.imshow(images[i],'gray')

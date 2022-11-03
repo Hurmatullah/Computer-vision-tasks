@@ -3,18 +3,17 @@ import numpy as np
 
 img = cv2.imread('iphone.jpg', cv2.IMREAD_UNCHANGED)
 
-#convert img to grey
+#преобразовать изображение в серый цвет
 img_grey = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-#set a thresh
+#установите пороговое значение
 thresh = 100
-#get threshold image
+#получить пороговое изображение
 ret,thresh_img = cv2.threshold(img_grey, thresh, 255, cv2.THRESH_BINARY)
-#find contours
+#найдите контуры
 contours, hierarchy = cv2.findContours(thresh_img, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-#create an empty image for contours
+#создайте пустое изображение для контуров
 img_contours = np.zeros(img.shape)
-# draw the contours on the empty image
+# нарисуйте контуры на пустом изображении
 cv2.drawContours(img_contours, contours, -1, (0,255,0), 3)
-#save image
 cv2.imwrite('task19-image/contourIphone.jpg',img_contours)

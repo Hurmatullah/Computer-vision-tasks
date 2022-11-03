@@ -10,7 +10,7 @@ cv.namedWindow('Color_Palette')
 cv.createTrackbar('R','Color_Palette',0,255,callbackFunction)
 cv.createTrackbar('G','Color_Palette',0,255,callbackFunction)
 cv.createTrackbar('B','Color_Palette',0,255,callbackFunction)
-# create switch for ON/OFF functionality
+# создать переключатель для включения / выключения функциональности
 switch = '0 : OFF \n1 : ON'
 cv.createTrackbar(switch, 'Color_Palette',0,1,callbackFunction)
 while(1):
@@ -18,7 +18,7 @@ while(1):
     k = cv.waitKey(1) & 0xFF
     if k == 27:
         break
-    # get current positions of four trackbars
+    # получить текущие позиции четырех полос трека
     r = cv.getTrackbarPos('R','Color_Palette')
     g = cv.getTrackbarPos('G','Color_Palette')
     b = cv.getTrackbarPos('B','Color_Palette')
