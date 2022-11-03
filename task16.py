@@ -3,7 +3,6 @@ from __future__ import (division, absolute_import, print_function, unicode_liter
 import cv2 as cv
 import numpy as np
 
-
 def show(final):
     cv.imshow('Холодный', final)
     cv.waitKey(0)
@@ -12,6 +11,7 @@ def show(final):
 # Insert any filename with path
 img = cv.imread('download.jpg')
 
+# Функция создания баланса белого для создания холодного фото
 def white_balance_loops(img):
     result = cv.cvtColor(img, cv.COLOR_BGR2LAB)
     avg_a = np.average(result[:, :, 1])
