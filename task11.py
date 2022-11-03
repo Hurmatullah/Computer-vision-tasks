@@ -20,5 +20,7 @@ for y in range(image.shape[0]):
             new_image[y,x,c] = np.clip(alpha*image[y,x,c] + beta, 0, 255)
 cv.imshow('Original Image', image)
 cv.imshow('New Image', new_image)
+cv.imwrite('task11-image/original_image.jpg', image)
+cv.imwrite('task11-image/Changed_image.jpg', new_image)
 cv.waitKey(0)
 cv.destroyAllWindows()
